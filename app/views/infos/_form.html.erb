@@ -1,0 +1,69 @@
+<%= form_for @info, :html => { :class => "form-horizontal well"} do |f| %>
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th class="span3">Personal Information</th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span3">Complete Name:</th>
+		<td><%= f.text_field :complete_name, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Address:</th>
+		<td><%= f.text_field :address, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Contact Number:</th>
+		<td><%= f.text_field :contact_number, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Gender:</th>
+		<td><%= f.select :gender, Gender::GENDER %></td>
+	</tr>
+	<tr>
+		<th class="span3">Birthday:</th>
+		<td><%= f.text_field :birthday, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Age:</th>
+		<td><%= f.text_field :age, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Email:</th>
+		<td><%= f.text_field :email, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Belt Rank:</th>
+		<td><%= f.select :belt, Belt::BELT  %></td>
+	</tr>
+		
+		</tbody>
+		</table>
+
+		<table class="table table-condensed">
+		<thead>
+			<th class="span3">Dojo Information</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<th class="span3">Dojo</th>
+			<td><%= f.text_field :dojo, :class => "span5" %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">Location</th>
+			<td><%= f.text_field :location, :class => "span5" %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">Instructor Name</th>
+			<td><%= f.text_field :instructor_name, :class => "span5" %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">belt Rank</th>
+			<td><%= f.select :belt_rank, Belt::BELT  %></td>
+		</tbody>
+</table>
+	<center><%= f.submit :class => "btn btn-primary" %></center>
+<% end %>
+	</div>
+</div>

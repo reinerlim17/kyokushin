@@ -1,0 +1,68 @@
+<div class="row">
+	<div class="span10">
+		    <ul class="breadcrumb">
+              <li>
+                <%= link_to "Information", infos_path %><span class="divider">/</span>
+              </li>
+                <%= link_to "Updated", edit_info_path(@info), :class => "pull-right label label-info" %>
+        	</ul>
+        	
+<table class="table table-condensed">
+		<thead>
+			<th class="span3">Personal Information</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="span3">Complete Name</th>
+				<td><%= @info.complete_name %></td>
+			</tr>
+			<tr>
+				<th class="span3">Address:</th>
+				<td><%= @info.address %></td>
+			</tr>
+			<tr>
+				<th class="span3">Contact Number :</th>
+				<td><%= @info.contact_number  %></td>
+			</tr>
+			<tr>
+				<th class="span3">Birthday: </th>
+				<td><%= @info.birthday %></td>
+			</tr>
+			<tr>
+				<th class="span3">Age: </th>
+				<td><%= @info.age %></td>
+			</tr>
+			<tr>
+				<th class="span3">Email:</th>
+				<td><%= @info.email %></th>
+			</tr>
+			<tr>
+				<th class="span3">Belt Rank
+				<td><%= @info.belt %></td>
+			</tr>
+		
+		</tbody>
+		</table>
+	<table class="table table-condensed">
+		<thead>
+			<th class="span3">Dojo Information</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<th class="span3">Dojo</th>
+			<td><%= @info.dojo %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">Location</th>
+			<td><%= @info.location %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">Instructor Name</th>
+			<td><%= @info.instructor_name %></td>
+		</tbody>
+		<tbody>
+			<th class="span3">belt Rank</th>
+			<td><%= @info.belt_rank  %></td>
+		</tbody>
+</table>

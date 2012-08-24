@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="span12">
+        <ul class="breadcrumb">
+              <li>
+                <%= link_to "Back", admins_path %><span class="divider">/</span>
+              </li>
+              
+              <%= link_to "New Tournament", new_tournament_path, :class => "pull-right label label-info" %>
+        </ul>
+    <table class="table table-condensed">
+      <thead>
+        <tr class="well">
+          <th class="span2">ID</th>
+          <th class="span2">What</th>
+          <th class="span2">Where</th>
+          <th class="span2">When</th>
+          <th class="span2">Time</th>
+          <th class="span2">Requirement</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <% @tournaments.each do |tour| %>
+        <tr>
+      <td><%= link_to tour.id, tournament_path(tour) %></td>
+      <td><%= tour.what %></td>
+      <td><%= tour.where %></td>
+      <td><%= tour.when %></td>
+      <td><%= tour.time %></td>
+      <td><%= tour.requirement %></td>
+     
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

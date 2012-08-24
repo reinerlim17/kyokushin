@@ -1,0 +1,35 @@
+<%= form_for @promotionAdmin, :html => { :class => "form-horizontal well"} do |f| %>
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th></th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span3">What:</th>
+		<td><%= f.text_field :what, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Where:</th>
+		<td><%= f.text_field :where, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">when:</th>
+		<td><%= f.text_field :when, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Time:</th>
+		<td><%= f.text_field :time, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Requirment:</th>
+		<td><%= f.text_field :requirement, :class => "span5" %></td>
+	</tr>
+	
+		
+		</tbody>
+		</table>
+			<center><%= f.submit :class => "btn btn-primary" %></center>
+<% end %>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="span12">
+        <ul class="breadcrumb">
+              <li>
+                <%= link_to "Information", infos_path %><span class="divider">/</span>
+              </li>
+              
+              <%= link_to "New Profile", new_info_path, :class => "pull-right label label-info" %>
+        </ul>
+    <table class="table table-condensed">
+      <thead>
+        <tr class="well">
+          <th class="span2">ID</th>
+          <th class="span2">Complete Name</th>
+          <th class="span2">Address</th>
+          <th class="span2">Contact Number</th>
+          <th class="span2">Belt</th>
+          <th class="span2">Dojo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @infos.each do |info| %>
+        <tr>
+      <td><%= link_to info.id, info_path(info) %></td>
+      <td><%= info.complete_name %></td>
+      <td><%= info.address %></td>
+      <td><%= info.contact_number %></td>
+      <td><%= info.belt %></td>
+      <td><%= info.dojo %></td>
+     
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

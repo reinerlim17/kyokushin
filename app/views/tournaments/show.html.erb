@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="span10">
+		    <ul class="breadcrumb">
+              <li>
+                <%= link_to "Tournament", tournaments_path %><span class="divider">/</span>
+              </li>
+                <%= link_to "Updated", edit_tournament_path(@tournament), :class => "pull-right label label-info" %>
+        	</ul>
+        	
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th></th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span3">What:</th>
+		<td><%= @tournament.what %></td>
+	</tr>
+	<tr>
+		<th class="span3">Where:</th>
+		<td><%= @tournament.where %></td>
+	</tr>
+	<tr>
+		<th class="span3">when:</th>
+		<td><%= @tournament.when %></td>
+	</tr>
+	<tr>
+		<th class="span3">Time:</th>
+		<td><%= @tournament.time %></td>
+	</tr>
+	<tr>
+		<th class="span3">Requirement:</th>
+		<td><%= @tournament.requirement %></td>
+	</tr>
+	
+		
+		</tbody>
+		</table>
+	
