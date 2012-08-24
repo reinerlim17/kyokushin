@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="span10">
+		    <ul class="breadcrumb">
+              <li>
+                <%= link_to "Forum", forums_path %><span class="divider">/</span>
+              </li>
+                <%= link_to "Updated", edit_forum_path(@forum), :class => "pull-right label label-info" %>
+        	</ul>
+        	
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th></th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span2">Topic:</th>
+		<td><%= @forum.topic %></td>
+	</tr>
+	<tr>
+		<th class="span2">Message:</th>
+		<td><%= @forum.message %></td>
+	</tr>
+
+	
+		
+		</tbody>
+		</table>
+	

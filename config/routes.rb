@@ -1,9 +1,12 @@
 Kyokushin::Application.routes.draw do
+  get "users/new"
+
  root :to => "pages#home"
- resources :infos
-
-
+ 
+match '/signup', to: 'users#new'
+resources :infos
  resources :admins
  resources :tournaments
  resources :promotionadmins
+ resources :forums
 end

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="span10">
+        <ul class="breadcrumb">
+              <li>
+                <%= link_to "Back", admins_path %><span class="divider">/</span>
+              </li>
+              
+              <%= link_to "New forum", new_forum_path, :class => "pull-right label label-info" %>
+        </ul>
+    <table class="table table-condensed">
+      <thead>
+        <tr class="well">
+          <th class="span1">Topic</th>
+          <th class="span1">Message</th>
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        <% @forums.each do |forum| %>
+        <tr>
+      <td><%= link_to forum.topic, forum_path(forum) %></td>
+      <td><%= forum.message %></td>
+
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

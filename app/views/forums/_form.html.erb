@@ -1,0 +1,24 @@
+<%= form_for @forum, :html => { :class => "form-horizontal well"} do |f| %>
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th></th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span3">Topic:</th>
+		<td><%= f.text_field :topic, :class => "span5" %></td>
+	</tr>
+	<tr>
+		<th class="span3">Message:</th>
+		<td><%= f.text_area :message, :class => "span5" %></td>
+	</tr>
+	
+	
+		
+		</tbody>
+		</table>
+			<center><%= f.submit :class => "btn btn-primary" %></center>
+<% end %>
+	</div>
+</div>
