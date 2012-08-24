@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="span10">
+		    <ul class="breadcrumb">
+              <li>
+                <%= link_to "Promotion", promotionadmins_path %><span class="divider">/</span>
+              </li>
+                <%= link_to "Updated", edit_promotionadmin_path(@promotionadmin), :class => "pull-right label label-info" %>
+        	</ul>
+        	
+<table class="table table-condensed">
+<tbody>
+	<thead>
+			<th></th>
+			<th></th>
+		</thead>
+	<tr>
+		<th class="span3">What:</th>
+		<td><%= @promotionadmin.what %></td>
+	</tr>
+	<tr>
+		<th class="span3">Where:</th>
+		<td><%= @promotionadmin.where %></td>
+	</tr>
+	<tr>
+		<th class="span3">when:</th>
+		<td><%= @promotionadmin.when %></td>
+	</tr>
+	<tr>
+		<th class="span3">Time:</th>
+		<td><%= @promotionadmin.time %></td>
+	</tr>
+	<tr>
+		<th class="span3">Requirement:</th>
+		<td><%= @promotionadmin.requirement %></td>
+	</tr>
+	
+		
+		</tbody>
+		</table>
+	

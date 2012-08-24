@@ -5,4 +5,5 @@ Kyokushin::Application.routes.draw do
 
  resources :admins
  resources :tournaments
+ resources :promotionadmins
 end

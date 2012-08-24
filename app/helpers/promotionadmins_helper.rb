@@ -1,0 +1,2 @@
+module PromotionadminsHelper
+end
