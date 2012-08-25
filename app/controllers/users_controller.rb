@@ -7,17 +7,22 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  def create
+    def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Welcome to Kyokushin Site"
+      sign_in @user
+      flash[:success] = "Welcome to kyokushin!"
       redirect_to @user
-  else
-    render 'new'
+    else
+      render 'new'
+    end
   end
-end
 
   def show
     @user = User.find(params[:id])
+end
+def destroy
+  sign_out
+  redirect_to root_path
 end
 end

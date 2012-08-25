@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120824150137) do
+ActiveRecord::Schema.define(:version => 20120825083647) do
 
   create_table "forums", :force => true do |t|
     t.string   "topic"
