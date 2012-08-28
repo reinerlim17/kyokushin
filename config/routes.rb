@@ -6,9 +6,11 @@ Kyokushin::Application.routes.draw do
   # root :to => "welcome#index"
  root :to => "pages#home"
  
-match '/signup', to: 'users#new'
-match '/signin', to: 'session#new'
-match '/signout', to:'sessions#destroy', via: :delete
+
+
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 resources :infos
  resources :admins
  resources :tournaments
