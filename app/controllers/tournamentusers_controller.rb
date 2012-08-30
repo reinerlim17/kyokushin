@@ -1,0 +1,2 @@
+class TournamentusersController < ApplicationController
+end

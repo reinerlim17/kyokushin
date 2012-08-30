@@ -19,5 +19,9 @@ Kyokushin::Application.routes.draw do
 
  resources :galaries
  resources :pictures
- resources :vidoes
+ resources :videos
+
+ resources :events
+ resources :tournamentusers
+ resources :promotionusers
 end
