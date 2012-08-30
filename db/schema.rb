@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828085634) do
+ActiveRecord::Schema.define(:version => 20120830023930) do
 
   create_table "forums", :force => true do |t|
     t.string   "topic"
     t.string   "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "galaries", :force => true do |t|
+    t.string   "pic"
+    t.string   "vid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -55,6 +62,13 @@ ActiveRecord::Schema.define(:version => 20120828085634) do
   add_index "models", ["email"], :name => "index_models_on_email", :unique => true
   add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
 
+  create_table "pictures", :force => true do |t|
+    t.string   "pic"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "promotion_admins", :force => true do |t|
     t.string   "what"
     t.string   "where"
@@ -90,6 +104,13 @@ ActiveRecord::Schema.define(:version => 20120828085634) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+  end
+
+  create_table "videos", :force => true do |t|
+    t.string   "vid"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

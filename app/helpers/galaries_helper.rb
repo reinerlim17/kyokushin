@@ -1,0 +1,2 @@
+module GalariesHelper
+end

@@ -1,0 +1,2 @@
+module GalarysHelper
+end

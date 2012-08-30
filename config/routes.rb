@@ -11,9 +11,13 @@ Kyokushin::Application.routes.draw do
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-resources :infos
+ resources :infos
  resources :admins
  resources :tournaments
  resources :promotionadmins
  resources :forums
+
+ resources :galaries
+ resources :pictures
+ resources :vidoes
 end

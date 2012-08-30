@@ -7,12 +7,12 @@
               
               <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Profile",'#'  %></li>
-              <li><%= link_to "Gallary", '#'%></li>
+              <li><%= link_to "Gallary", galaries_path %></li>
               <li><%= link_to "Event", '#'%></li>
               <li><%= link_to "Dojo", '#'%></li>
               <li><%= link_to "Forum",'#' %></li>
               <li><%= link_to "Contact Us",'#' %></li>
-                   <% if signed_in? %>
+                   
             <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -29,7 +29,7 @@
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
+          
         </ul>
       </nav>
     </div>
