@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120830023930) do
+ActiveRecord::Schema.define(:version => 20120831014611) do
+
+  create_table "events", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "forums", :force => true do |t|
     t.string   "topic"
@@ -88,6 +93,11 @@ ActiveRecord::Schema.define(:version => 20120830023930) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "promotionusers", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "tournaments", :force => true do |t|
     t.string   "what"
     t.string   "where"
@@ -98,12 +108,25 @@ ActiveRecord::Schema.define(:version => 20120830023930) do
     t.string   "requirement"
   end
 
+  create_table "tournamentusers", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+    t.string   "address"
+    t.string   "contact_no"
+    t.string   "gender"
+    t.string   "birthday"
+    t.string   "dojo"
+    t.string   "location"
+    t.string   "instructor_name"
+    t.string   "belt_name"
   end
 
   create_table "videos", :force => true do |t|
